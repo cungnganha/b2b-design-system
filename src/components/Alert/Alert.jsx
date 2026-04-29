@@ -13,7 +13,7 @@ const SvgIcon = ({ variant, size }) => (
 );
 export const Alert = ({ variant='info', style='subtle', size='md', title, description='Alert description with additional context.', showClose=true, onClose }) => (
   <div className={['ds-alert',`ds-alert--${variant}`,`ds-alert--${style}`,`ds-alert--${size}`].join(' ')} role="alert">
-    <span className="ds-alert__icon"><SvgIcon variant={variant} size={size==='sm'?14:18}/></span>
+    <span className="ds-alert__icon"><SvgIcon variant={variant} size={size==='sm'?16:20}/></span>
     <div className="ds-alert__content">
       {title && <p className="ds-alert__title">{title}</p>}
       <p className="ds-alert__description">{description}</p>

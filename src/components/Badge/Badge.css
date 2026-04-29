@@ -58,3 +58,13 @@
 .ds-badge--info.ds-badge--outline    { background:#fff; color:#1142AD; border-color:#7AB1FF; }
 .ds-badge--info.ds-badge--solid      { background:#226FF6; color:#fff; }
 .ds-badge--info .ds-badge__dot       { background:#226FF6; }
+
+/* Dot on solid backgrounds -> white (same color as bg = invisible) */
+.ds-badge--default.ds-badge--solid .ds-badge__dot,
+.ds-badge--primary.ds-badge--solid .ds-badge__dot,
+.ds-badge--success.ds-badge--solid .ds-badge__dot,
+.ds-badge--warning.ds-badge--solid .ds-badge__dot,
+.ds-badge--error.ds-badge--solid   .ds-badge__dot,
+.ds-badge--info.ds-badge--solid    .ds-badge__dot {
+  background: rgba(255, 255, 255, 0.8);
+}

@@ -25,8 +25,8 @@ export function Tooltip({
   const bubbleCls = [
     'ds-tooltip',
     `ds-tooltip--${position}`,
-    (wrap || truncate) ? 'ds-tooltip--multiline' : '',
-    truncate ? 'ds-tooltip--truncate' : '',
+    wrap            ? 'ds-tooltip--wrap'     : '',
+    wrap && truncate ? 'ds-tooltip--truncate' : '',
   ].filter(Boolean).join(' ');
 
   const bubbleStyle = {
