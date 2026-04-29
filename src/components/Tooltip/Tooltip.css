@@ -1,26 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
-.ds-tooltip-wrapper {
+.ds-tooltip-host {
   position: relative;
   display: inline-flex;
 }
 
 .ds-tooltip-trigger {
-  border: 1px solid #E2E8F0;
-  background: #fff;
-  padding: 6px 16px;
-  border-radius: 6px;
-  cursor: default;
-  font-family: 'Lexend', sans-serif;
-  font-size: 14px;
-  color: #0F172A;
+  border: 1px solid #E2E8F0; background: #fff;
+  padding: 6px 16px; border-radius: 6px;
+  cursor: default; font-family: 'Lexend', sans-serif;
+  font-size: 14px; color: #0F172A;
 }
 
-/* Tooltip bubble */
+/* Bubble */
 .ds-tooltip {
   position: absolute;
   z-index: 9999;
   pointer-events: none;
+  padding: 7px 10px;
   border-radius: 8px;
   background: #0F172A;
   color: #fff;
@@ -28,20 +25,11 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  box-shadow: 0 4px 8px rgba(16, 24, 40, 0.12), 0 2px 4px rgba(16, 24, 40, 0.08);
   white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(16,24,40,.12), 0 2px 4px rgba(16,24,40,.08);
 }
-
-/* Truncate = allow wrap */
-.ds-tooltip--truncate {
-  white-space: normal;
-  overflow: hidden;
-}
-
-.ds-tooltip__content {
-  display: block;
-  padding: 7px 10px;
-}
+.ds-tooltip--multiline { white-space: normal; }
+.ds-tooltip--truncate  { pointer-events: auto; }
 
 /* Arrow */
 .ds-tooltip::after {
@@ -53,51 +41,39 @@
 /* Top */
 .ds-tooltip--top {
   bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; transform: translateX(-50%);
 }
 .ds-tooltip--top::after {
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 100%; left: 50%; transform: translateX(-50%);
   border-top-color: #0F172A;
 }
 
 /* Bottom */
 .ds-tooltip--bottom {
   top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; transform: translateX(-50%);
 }
 .ds-tooltip--bottom::after {
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 100%; left: 50%; transform: translateX(-50%);
   border-bottom-color: #0F172A;
 }
 
 /* Left */
 .ds-tooltip--left {
   right: calc(100% + 10px);
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; transform: translateY(-50%);
 }
 .ds-tooltip--left::after {
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 100%; top: 50%; transform: translateY(-50%);
   border-left-color: #0F172A;
 }
 
 /* Right */
 .ds-tooltip--right {
   left: calc(100% + 10px);
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; transform: translateY(-50%);
 }
 .ds-tooltip--right::after {
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 100%; top: 50%; transform: translateY(-50%);
   border-right-color: #0F172A;
 }
