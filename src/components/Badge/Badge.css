@@ -1,48 +1,60 @@
-@import '../../tokens/tokens.css';
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
 .ds-badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-family: var(--font-family-base); font-weight: var(--font-weight-medium);
-  border-radius: var(--radius-full); white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  border-radius: 9999px;
+  white-space: nowrap;
+  border: 1px solid transparent;
 }
-.ds-badge--sm  { padding: 2px  var(--spacing-1-5); font-size: 11px; }
-.ds-badge--md  { padding: 3px  var(--spacing-2);   font-size: 12px; }
-.ds-badge--lg  { padding: 4px  var(--spacing-3);   font-size: 14px; }
-.ds-badge__dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.ds-badge--sm  { padding: 2px 6px;   font-size: 11px; }
+.ds-badge--md  { padding: 3px 8px;   font-size: 12px; }
+.ds-badge--lg  { padding: 4px 12px;  font-size: 14px; }
+
+.ds-badge__dot {
+  display: inline-block;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ds-badge--sm .ds-badge__dot { width: 5px; height: 5px; }
+.ds-badge--md .ds-badge__dot { width: 6px; height: 6px; }
+.ds-badge--lg .ds-badge__dot { width: 7px; height: 7px; }
 
 /* Default */
-.ds-badge--default.ds-badge--subtle  { background: var(--color-bg-muted);    color: var(--color-text-secondary); }
-.ds-badge--default.ds-badge--outline { background: var(--color-bg-surface);   color: var(--color-text-secondary); border: 1px solid var(--color-border-strong); }
-.ds-badge--default.ds-badge--solid   { background: var(--gray-600);           color: var(--white); }
-.ds-badge--default .ds-badge__dot    { background: var(--color-text-tertiary); }
+.ds-badge--default.ds-badge--subtle  { background:#F1F5F9; color:#475569; }
+.ds-badge--default.ds-badge--outline { background:#fff; color:#475569; border-color:#CBD5E1; }
+.ds-badge--default.ds-badge--solid   { background:#64748B; color:#fff; }
+.ds-badge--default .ds-badge__dot    { background:#94A3B8; }
 
 /* Primary */
-.ds-badge--primary.ds-badge--subtle  { background: var(--color-brand-subtle);  color: var(--color-brand-text); }
-.ds-badge--primary.ds-badge--outline { background: var(--color-bg-surface);    color: var(--color-brand-text); border: 1px solid var(--color-brand-border); }
-.ds-badge--primary.ds-badge--solid   { background: var(--color-brand-primary); color: var(--white); }
-.ds-badge--primary .ds-badge__dot    { background: var(--color-brand-primary); }
+.ds-badge--primary.ds-badge--subtle  { background:#EBF3FF; color:#1142AD; }
+.ds-badge--primary.ds-badge--outline { background:#fff; color:#1142AD; border-color:#7AB1FF; }
+.ds-badge--primary.ds-badge--solid   { background:#226FF6; color:#fff; }
+.ds-badge--primary .ds-badge__dot    { background:#226FF6; }
 
 /* Success */
-.ds-badge--success.ds-badge--subtle  { background: var(--color-feedback-success-bg);   color: var(--color-feedback-success-text); }
-.ds-badge--success.ds-badge--outline { background: var(--color-bg-surface);             color: var(--color-feedback-success-text); border: 1px solid var(--color-feedback-success-border); }
-.ds-badge--success.ds-badge--solid   { background: var(--color-feedback-success-icon);  color: var(--white); }
-.ds-badge--success .ds-badge__dot    { background: var(--color-feedback-success-icon);  }
+.ds-badge--success.ds-badge--subtle  { background:#F0FDF4; color:#15803D; }
+.ds-badge--success.ds-badge--outline { background:#fff; color:#15803D; border-color:#22C55E; }
+.ds-badge--success.ds-badge--solid   { background:#22C55E; color:#fff; }
+.ds-badge--success .ds-badge__dot    { background:#22C55E; }
 
 /* Warning */
-.ds-badge--warning.ds-badge--subtle  { background: var(--color-feedback-warning-bg);   color: var(--color-feedback-warning-text); }
-.ds-badge--warning.ds-badge--outline { background: var(--color-bg-surface);             color: var(--color-feedback-warning-text); border: 1px solid var(--color-feedback-warning-border); }
-.ds-badge--warning.ds-badge--solid   { background: var(--color-feedback-warning-icon);  color: var(--white); }
-.ds-badge--warning .ds-badge__dot    { background: var(--color-feedback-warning-icon);  }
+.ds-badge--warning.ds-badge--subtle  { background:#FEFCE8; color:#A16207; }
+.ds-badge--warning.ds-badge--outline { background:#fff; color:#A16207; border-color:#EAB308; }
+.ds-badge--warning.ds-badge--solid   { background:#EAB308; color:#fff; }
+.ds-badge--warning .ds-badge__dot    { background:#EAB308; }
 
 /* Error */
-.ds-badge--error.ds-badge--subtle    { background: var(--color-feedback-error-bg);   color: var(--color-feedback-error-text); }
-.ds-badge--error.ds-badge--outline   { background: var(--color-bg-surface);           color: var(--color-feedback-error-text); border: 1px solid var(--color-feedback-error-border); }
-.ds-badge--error.ds-badge--solid     { background: var(--color-feedback-error-icon);  color: var(--white); }
-.ds-badge--error .ds-badge__dot      { background: var(--color-feedback-error-icon);  }
+.ds-badge--error.ds-badge--subtle    { background:#FFF1F2; color:#B91C1C; }
+.ds-badge--error.ds-badge--outline   { background:#fff; color:#B91C1C; border-color:#EF4444; }
+.ds-badge--error.ds-badge--solid     { background:#EF4444; color:#fff; }
+.ds-badge--error .ds-badge__dot      { background:#EF4444; }
 
 /* Info */
-.ds-badge--info.ds-badge--subtle     { background: var(--color-feedback-info-bg);   color: var(--color-feedback-info-text); }
-.ds-badge--info.ds-badge--outline    { background: var(--color-bg-surface);          color: var(--color-feedback-info-text); border: 1px solid var(--color-feedback-info-border); }
-.ds-badge--info.ds-badge--solid      { background: var(--color-feedback-info-icon);  color: var(--white); }
-.ds-badge--info .ds-badge__dot       { background: var(--color-feedback-info-icon);  }
+.ds-badge--info.ds-badge--subtle     { background:#EBF3FF; color:#1142AD; }
+.ds-badge--info.ds-badge--outline    { background:#fff; color:#1142AD; border-color:#7AB1FF; }
+.ds-badge--info.ds-badge--solid      { background:#226FF6; color:#fff; }
+.ds-badge--info .ds-badge__dot       { background:#226FF6; }
