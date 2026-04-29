@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+.ds-checkbox { display:inline-flex; align-items:center; cursor:pointer; font-family:'Lexend',sans-serif; }
+.ds-checkbox--sm { gap:8px;  font-size:14px; }
+.ds-checkbox--md { gap:10px; font-size:16px; }
+.ds-checkbox--lg { gap:12px; font-size:18px; }
+
+.ds-checkbox__box {
+  display:flex; align-items:center; justify-content:center;
+  border:1.5px solid #CBD5E1; border-radius:4px; background:#fff; flex-shrink:0;
+  font-size:11px; font-weight:700; color:#fff;
+}
+.ds-checkbox--sm .ds-checkbox__box { width:16px; height:16px; }
+.ds-checkbox--md .ds-checkbox__box { width:20px; height:20px; }
+.ds-checkbox--lg .ds-checkbox__box { width:24px; height:24px; font-size:14px; }
+
+.ds-checkbox--checked .ds-checkbox__box        { background:#226FF6; border-color:#226FF6; }
+.ds-checkbox--disabled .ds-checkbox__box       { background:#F1F5F9; border-color:#E2E8F0; }
+.ds-checkbox--disabled-checked .ds-checkbox__box { background:#F1F5F9; border-color:#E2E8F0; }
+.ds-checkbox--disabled .ds-checkbox__label     { color:#94A3B8; }
+.ds-checkbox--disabled-checked .ds-checkbox__label { color:#94A3B8; }
+.ds-checkbox__label { color:#0F172A; }

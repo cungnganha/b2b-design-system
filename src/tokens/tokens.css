@@ -1,0 +1,189 @@
+/* ============================================================
+   B2B Design System — Design Tokens
+   Auto-generated from Figma variables
+   Brand: #226FF6 (blue/500) | Font: Lexend | Grid: 4px
+   ============================================================ */
+
+:root {
+
+  /* ── PRIMITIVES: Blue (Brand) ── */
+  --blue-50:  #EBF3FF;
+  --blue-100: #D0E5FF;
+  --blue-200: #A8CCFF;
+  --blue-300: #7AB1FF;
+  --blue-400: #5596FF;
+  --blue-500: #226FF6;
+  --blue-600: #1757D4;
+  --blue-700: #1142AD;
+  --blue-800: #0D3185;
+  --blue-900: #081F5C;
+
+  /* ── PRIMITIVES: Gray ── */
+  --gray-50:  #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+  --gray-950: #020617;
+
+  /* ── PRIMITIVES: Semantic colors ── */
+  --green-50:  #F0FDF4;
+  --green-500: #22C55E;
+  --green-700: #15803D;
+  --red-50:    #FFF1F2;
+  --red-500:   #EF4444;
+  --red-700:   #B91C1C;
+  --yellow-50: #FEFCE8;
+  --yellow-500: #EAB308;
+  --yellow-700: #A16207;
+  --orange-50:  #FFF7ED;
+  --orange-500: #F97316;
+  --orange-700: #C2410C;
+
+  /* ── PRIMITIVES: Base ── */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ================================================================
+     SEMANTIC TOKENS — these are what components use
+     ================================================================ */
+
+  /* Background */
+  --color-bg-page:    var(--gray-50);
+  --color-bg-surface: var(--white);
+  --color-bg-subtle:  var(--gray-100);
+  --color-bg-muted:   var(--gray-200);
+  --color-bg-overlay: var(--gray-900);
+
+  /* Brand */
+  --color-brand-primary: var(--blue-500);
+  --color-brand-hover:   var(--blue-600);
+  --color-brand-active:  var(--blue-700);
+  --color-brand-subtle:  var(--blue-50);
+  --color-brand-border:  var(--blue-300);
+  --color-brand-text:    var(--blue-700);
+
+  /* Text */
+  --color-text-primary:   var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-tertiary:  var(--gray-400);
+  --color-text-disabled:  var(--gray-400);
+  --color-text-inverse:   var(--white);
+  --color-text-on-brand:  var(--white);
+
+  /* Border */
+  --color-border-default: var(--gray-200);
+  --color-border-strong:  var(--gray-300);
+  --color-border-focus:   var(--blue-500);
+  --color-border-error:   var(--red-500);
+
+  /* State */
+  --color-state-hover:       var(--blue-50);
+  --color-state-selected:    var(--blue-100);
+  --color-state-disabled-bg: var(--gray-100);
+
+  /* Feedback — Success */
+  --color-feedback-success-bg:     var(--green-50);
+  --color-feedback-success-text:   var(--green-700);
+  --color-feedback-success-border: var(--green-500);
+  --color-feedback-success-icon:   var(--green-500);
+
+  /* Feedback — Warning */
+  --color-feedback-warning-bg:     var(--yellow-50);
+  --color-feedback-warning-text:   var(--yellow-700);
+  --color-feedback-warning-border: var(--yellow-500);
+  --color-feedback-warning-icon:   var(--yellow-500);
+
+  /* Feedback — Error */
+  --color-feedback-error-bg:     var(--red-50);
+  --color-feedback-error-text:   var(--red-700);
+  --color-feedback-error-border: var(--red-500);
+  --color-feedback-error-icon:   var(--red-500);
+
+  /* Feedback — Info */
+  --color-feedback-info-bg:     var(--blue-50);
+  --color-feedback-info-text:   var(--blue-700);
+  --color-feedback-info-border: var(--blue-300);
+  --color-feedback-info-icon:   var(--blue-500);
+
+  /* ── SPACING (Tailwind 4px grid) ── */
+  --spacing-px:  1px;
+  --spacing-0:   0px;
+  --spacing-0-5: 2px;
+  --spacing-1:   4px;
+  --spacing-1-5: 6px;
+  --spacing-2:   8px;
+  --spacing-2-5: 10px;
+  --spacing-3:   12px;
+  --spacing-3-5: 14px;
+  --spacing-4:   16px;
+  --spacing-5:   20px;
+  --spacing-6:   24px;
+  --spacing-7:   28px;
+  --spacing-8:   32px;
+  --spacing-9:   36px;
+  --spacing-10:  40px;
+  --spacing-11:  44px;
+  --spacing-12:  48px;
+  --spacing-16:  64px;
+  --spacing-20:  80px;
+  --spacing-24:  96px;
+
+  /* ── BORDER RADIUS ── */
+  --radius-none: 0px;
+  --radius-sm:   2px;
+  --radius-base: 4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-2xl:  16px;
+  --radius-3xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── SHADOWS ── */
+  --shadow-xs:  0 1px 2px rgba(16,24,40,0.05);
+  --shadow-sm:  0 1px 3px rgba(16,24,40,0.10), 0 1px 2px rgba(16,24,40,0.06);
+  --shadow-md:  0 4px 8px rgba(16,24,40,0.10), 0 2px 4px rgba(16,24,40,0.06);
+  --shadow-lg:  0 12px 16px rgba(16,24,40,0.10), 0 4px 6px rgba(16,24,40,0.05);
+  --shadow-xl:  0 20px 24px rgba(16,24,40,0.10), 0 8px 10px rgba(16,24,40,0.05);
+  --shadow-2xl: 0 24px 48px rgba(16,24,40,0.18);
+  --shadow-focus-ring: 0 0 0 3px rgba(34,111,246,0.25);
+
+  /* ── TYPOGRAPHY ── */
+  --font-family-base: 'Lexend', sans-serif;
+  --font-size-xs:   11px;
+  --font-size-sm:   12px;
+  --font-size-base: 14px;
+  --font-size-md:   16px;
+  --font-size-lg:   18px;
+  --font-size-xl:   20px;
+  --font-size-2xl:  24px;
+  --font-size-3xl:  30px;
+  --font-size-4xl:  36px;
+  --font-size-5xl:  48px;
+  --font-size-6xl:  60px;
+  --font-size-7xl:  72px;
+
+  --line-height-xs:   16px;
+  --line-height-sm:   16px;
+  --line-height-base: 20px;
+  --line-height-md:   24px;
+  --line-height-lg:   28px;
+  --line-height-xl:   28px;
+  --line-height-2xl:  32px;
+  --line-height-3xl:  36px;
+  --line-height-4xl:  40px;
+  --line-height-5xl:  52px;
+  --line-height-6xl:  68px;
+  --line-height-7xl:  80px;
+
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+}

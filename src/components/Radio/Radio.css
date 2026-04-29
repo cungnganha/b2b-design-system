@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+.ds-radio { display:inline-flex; align-items:center; cursor:pointer; font-family:'Lexend',sans-serif; }
+.ds-radio--sm { gap:8px;  font-size:14px; }
+.ds-radio--md { gap:10px; font-size:16px; }
+.ds-radio--lg { gap:12px; font-size:18px; }
+.ds-radio__circle {
+  border:1.5px solid #CBD5E1; border-radius:50%; background:#fff;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.ds-radio--sm .ds-radio__circle { width:16px; height:16px; }
+.ds-radio--md .ds-radio__circle { width:20px; height:20px; }
+.ds-radio--lg .ds-radio__circle { width:24px; height:24px; }
+.ds-radio__dot { border-radius:50%; background:#226FF6; }
+.ds-radio--sm .ds-radio__dot { width:6px;  height:6px;  }
+.ds-radio--md .ds-radio__dot { width:8px;  height:8px;  }
+.ds-radio--lg .ds-radio__dot { width:10px; height:10px; }
+.ds-radio--selected .ds-radio__circle { border-color:#226FF6; }
+.ds-radio--disabled .ds-radio__circle { background:#F1F5F9; border-color:#E2E8F0; }
+.ds-radio--disabled-selected .ds-radio__circle { background:#F1F5F9; border-color:#E2E8F0; }
+.ds-radio--disabled-selected .ds-radio__dot { background:#94A3B8; }
+.ds-radio--disabled .ds-radio__label, .ds-radio--disabled-selected .ds-radio__label { color:#94A3B8; }
+.ds-radio__label { color:#0F172A; }

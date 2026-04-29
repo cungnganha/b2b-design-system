@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+.ds-input-wrap { display:flex; flex-direction:column; gap:6px; width:100%; max-width:400px; }
+.ds-input__label { font-family:'Lexend',sans-serif; font-weight:500; color:#0F172A; }
+.ds-input-wrap--sm .ds-input__label { font-size:12px; }
+.ds-input-wrap--md .ds-input__label { font-size:13px; }
+.ds-input-wrap--lg .ds-input__label { font-size:15px; }
+.ds-input-field { display:flex; align-items:center; width:100%; background:#fff; border:1.5px solid #E2E8F0; border-radius:6px; transition:border-color 120ms,box-shadow 120ms; box-sizing:border-box; }
+.ds-input-field--sm { height:32px; padding:0 12px; gap:6px; }
+.ds-input-field--md { height:40px; padding:0 16px; gap:8px; }
+.ds-input-field--lg { height:48px; padding:0 20px; gap:10px; }
+.ds-input-field:focus-within,.ds-input-field--focus { border-color:#226FF6; box-shadow:0 0 0 3px rgba(34,111,246,0.15); }
+.ds-input-field--filled { border-color:#CBD5E1; }
+.ds-input-field--error  { border-color:#EF4444; }
+.ds-input-field--error:focus-within { box-shadow:0 0 0 3px rgba(239,68,68,0.15); }
+.ds-input-field--disabled { background:#F8FAFC; border-color:#E2E8F0; pointer-events:none; }
+.ds-input__el { flex:1; min-width:0; border:none; outline:none; background:transparent; font-family:'Lexend',sans-serif; color:#0F172A; }
+.ds-input-field--sm .ds-input__el { font-size:13px; }
+.ds-input-field--md .ds-input__el { font-size:14px; }
+.ds-input-field--lg .ds-input__el { font-size:16px; }
+.ds-input__el::placeholder { color:#94A3B8; }
+.ds-input__el:disabled { color:#94A3B8; }
+.ds-input__icon { display:inline-flex; align-items:center; flex-shrink:0; color:#64748B; }
+.ds-input__icon svg { stroke:currentColor; }
+.ds-input__helper { margin:0; font-family:'Lexend',sans-serif; font-size:12px; line-height:16px; color:#64748B; }
+.ds-input__helper--error { color:#B91C1C; }

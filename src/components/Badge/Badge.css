@@ -1,0 +1,48 @@
+@import '../../tokens/tokens.css';
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
+.ds-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--font-family-base); font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full); white-space: nowrap;
+}
+.ds-badge--sm  { padding: 2px  var(--spacing-1-5); font-size: 11px; }
+.ds-badge--md  { padding: 3px  var(--spacing-2);   font-size: 12px; }
+.ds-badge--lg  { padding: 4px  var(--spacing-3);   font-size: 14px; }
+.ds-badge__dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+/* Default */
+.ds-badge--default.ds-badge--subtle  { background: var(--color-bg-muted);    color: var(--color-text-secondary); }
+.ds-badge--default.ds-badge--outline { background: var(--color-bg-surface);   color: var(--color-text-secondary); border: 1px solid var(--color-border-strong); }
+.ds-badge--default.ds-badge--solid   { background: var(--gray-600);           color: var(--white); }
+.ds-badge--default .ds-badge__dot    { background: var(--color-text-tertiary); }
+
+/* Primary */
+.ds-badge--primary.ds-badge--subtle  { background: var(--color-brand-subtle);  color: var(--color-brand-text); }
+.ds-badge--primary.ds-badge--outline { background: var(--color-bg-surface);    color: var(--color-brand-text); border: 1px solid var(--color-brand-border); }
+.ds-badge--primary.ds-badge--solid   { background: var(--color-brand-primary); color: var(--white); }
+.ds-badge--primary .ds-badge__dot    { background: var(--color-brand-primary); }
+
+/* Success */
+.ds-badge--success.ds-badge--subtle  { background: var(--color-feedback-success-bg);   color: var(--color-feedback-success-text); }
+.ds-badge--success.ds-badge--outline { background: var(--color-bg-surface);             color: var(--color-feedback-success-text); border: 1px solid var(--color-feedback-success-border); }
+.ds-badge--success.ds-badge--solid   { background: var(--color-feedback-success-icon);  color: var(--white); }
+.ds-badge--success .ds-badge__dot    { background: var(--color-feedback-success-icon);  }
+
+/* Warning */
+.ds-badge--warning.ds-badge--subtle  { background: var(--color-feedback-warning-bg);   color: var(--color-feedback-warning-text); }
+.ds-badge--warning.ds-badge--outline { background: var(--color-bg-surface);             color: var(--color-feedback-warning-text); border: 1px solid var(--color-feedback-warning-border); }
+.ds-badge--warning.ds-badge--solid   { background: var(--color-feedback-warning-icon);  color: var(--white); }
+.ds-badge--warning .ds-badge__dot    { background: var(--color-feedback-warning-icon);  }
+
+/* Error */
+.ds-badge--error.ds-badge--subtle    { background: var(--color-feedback-error-bg);   color: var(--color-feedback-error-text); }
+.ds-badge--error.ds-badge--outline   { background: var(--color-bg-surface);           color: var(--color-feedback-error-text); border: 1px solid var(--color-feedback-error-border); }
+.ds-badge--error.ds-badge--solid     { background: var(--color-feedback-error-icon);  color: var(--white); }
+.ds-badge--error .ds-badge__dot      { background: var(--color-feedback-error-icon);  }
+
+/* Info */
+.ds-badge--info.ds-badge--subtle     { background: var(--color-feedback-info-bg);   color: var(--color-feedback-info-text); }
+.ds-badge--info.ds-badge--outline    { background: var(--color-bg-surface);          color: var(--color-feedback-info-text); border: 1px solid var(--color-feedback-info-border); }
+.ds-badge--info.ds-badge--solid      { background: var(--color-feedback-info-icon);  color: var(--white); }
+.ds-badge--info .ds-badge__dot       { background: var(--color-feedback-info-icon);  }
