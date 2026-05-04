@@ -1,0 +1,225 @@
+/* ============================================================
+   Tags — interactive pill component
+   Variants: default / primary / success / warning / error / info
+   Styles:   subtle / outline / solid
+   Sizes:    sm / md / lg
+   ============================================================ */
+
+.ds-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-family-base, 'Lexend', sans-serif);
+  font-weight: var(--font-weight-medium, 500);
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1;
+  transition: background 120ms ease, border-color 120ms ease, opacity 120ms ease;
+  user-select: none;
+}
+
+/* ── Sizes ── */
+.ds-tag--sm { padding: 2px 8px;   font-size: var(--font-size-xs, 11px);   gap: 4px; }
+.ds-tag--md { padding: 3px 10px;  font-size: var(--font-size-sm, 12px);   gap: 5px; }
+.ds-tag--lg { padding: 4px 12px;  font-size: var(--font-size-base, 14px); gap: 6px; }
+
+/* ── Avatar slot ── */
+.ds-tag__avatar {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: -2px;
+}
+
+/* ── Label ── */
+.ds-tag__label {
+  line-height: var(--line-height-xs, 16px);
+}
+
+/* ── Remove button ── */
+.ds-tag__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  margin-right: -2px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  border-radius: var(--radius-full, 9999px);
+  transition: opacity 100ms ease;
+  line-height: 0;
+}
+.ds-tag__remove:hover:not(:disabled) { opacity: 1; }
+.ds-tag__remove:disabled { cursor: not-allowed; }
+
+/* ── Clickable ── */
+.ds-tag--clickable {
+  cursor: pointer;
+}
+.ds-tag--clickable:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus-ring, 0 0 0 3px rgba(34,111,246,0.25));
+}
+
+/* ── Disabled ── */
+.ds-tag--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.ds-tag--disabled .ds-tag__remove {
+  pointer-events: none;
+}
+
+/* ============================================================
+   COLOR THEMES
+   ============================================================ */
+
+/* ── Default ── */
+.ds-tag--default.ds-tag--subtle {
+  background: var(--color-bg-subtle, #f1f5f9);
+  color: var(--color-text-secondary, #475569);
+}
+.ds-tag--default.ds-tag--subtle.ds-tag--clickable:hover {
+  background: var(--color-bg-muted, #e2e8f0);
+}
+.ds-tag--default.ds-tag--outline {
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-text-secondary, #475569);
+  border-color: var(--color-border-strong, #cbd5e1);
+}
+.ds-tag--default.ds-tag--outline.ds-tag--clickable:hover {
+  background: var(--color-bg-subtle, #f1f5f9);
+}
+.ds-tag--default.ds-tag--solid {
+  background: var(--gray-500, #64748b);
+  color: var(--white, #fff);
+}
+.ds-tag--default.ds-tag--solid.ds-tag--clickable:hover {
+  background: var(--gray-600, #475569);
+}
+
+/* ── Primary ── */
+.ds-tag--primary.ds-tag--subtle {
+  background: var(--color-brand-subtle, #ebf3ff);
+  color: var(--color-brand-text, #1757d4);
+}
+.ds-tag--primary.ds-tag--subtle.ds-tag--clickable:hover {
+  background: var(--blue-100, #d0e5ff);
+}
+.ds-tag--primary.ds-tag--outline {
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-brand-text, #1757d4);
+  border-color: var(--color-brand-border, #a8ccff);
+}
+.ds-tag--primary.ds-tag--outline.ds-tag--clickable:hover {
+  background: var(--color-brand-subtle, #ebf3ff);
+}
+.ds-tag--primary.ds-tag--solid {
+  background: var(--color-brand-primary, #226ff6);
+  color: var(--white, #fff);
+}
+.ds-tag--primary.ds-tag--solid.ds-tag--clickable:hover {
+  background: var(--color-brand-hover, #1757d4);
+}
+
+/* ── Success ── */
+.ds-tag--success.ds-tag--subtle {
+  background: var(--color-feedback-success-bg, #f0fdf4);
+  color: var(--color-feedback-success-text, #15803d);
+}
+.ds-tag--success.ds-tag--subtle.ds-tag--clickable:hover {
+  background: #dcfce7;
+}
+.ds-tag--success.ds-tag--outline {
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-feedback-success-text, #15803d);
+  border-color: var(--color-feedback-success-border, #86efac);
+}
+.ds-tag--success.ds-tag--outline.ds-tag--clickable:hover {
+  background: var(--color-feedback-success-bg, #f0fdf4);
+}
+.ds-tag--success.ds-tag--solid {
+  background: var(--green-500, #22c55e);
+  color: var(--white, #fff);
+}
+.ds-tag--success.ds-tag--solid.ds-tag--clickable:hover {
+  background: var(--green-700, #15803d);
+}
+
+/* ── Warning ── */
+.ds-tag--warning.ds-tag--subtle {
+  background: var(--color-feedback-warning-bg, #fefce8);
+  color: var(--color-feedback-warning-text, #a16207);
+}
+.ds-tag--warning.ds-tag--subtle.ds-tag--clickable:hover {
+  background: #fef9c3;
+}
+.ds-tag--warning.ds-tag--outline {
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-feedback-warning-text, #a16207);
+  border-color: var(--color-feedback-warning-border, #fde047);
+}
+.ds-tag--warning.ds-tag--outline.ds-tag--clickable:hover {
+  background: var(--color-feedback-warning-bg, #fefce8);
+}
+.ds-tag--warning.ds-tag--solid {
+  background: var(--yellow-500, #eab308);
+  color: var(--white, #fff);
+}
+.ds-tag--warning.ds-tag--solid.ds-tag--clickable:hover {
+  background: var(--yellow-700, #a16207);
+}
+
+/* ── Error ── */
+.ds-tag--error.ds-tag--subtle {
+  background: var(--color-feedback-error-bg, #fff1f2);
+  color: var(--color-feedback-error-text, #b91c1c);
+}
+.ds-tag--error.ds-tag--subtle.ds-tag--clickable:hover {
+  background: #ffe4e6;
+}
+.ds-tag--error.ds-tag--outline {
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-feedback-error-text, #b91c1c);
+  border-color: var(--color-feedback-error-border, #fca5a5);
+}
+.ds-tag--error.ds-tag--outline.ds-tag--clickable:hover {
+  background: var(--color-feedback-error-bg, #fff1f2);
+}
+.ds-tag--error.ds-tag--solid {
+  background: var(--red-500, #ef4444);
+  color: var(--white, #fff);
+}
+.ds-tag--error.ds-tag--solid.ds-tag--clickable:hover {
+  background: var(--red-700, #b91c1c);
+}
+
+/* ── Info ── */
+.ds-tag--info.ds-tag--subtle {
+  background: var(--color-feedback-info-bg, #ebf3ff);
+  color: var(--color-feedback-info-text, #1142ad);
+}
+.ds-tag--info.ds-tag--subtle.ds-tag--clickable:hover {
+  background: var(--blue-100, #d0e5ff);
+}
+.ds-tag--info.ds-tag--outline {
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-feedback-info-text, #1142ad);
+  border-color: var(--color-feedback-info-border, #a8ccff);
+}
+.ds-tag--info.ds-tag--outline.ds-tag--clickable:hover {
+  background: var(--color-feedback-info-bg, #ebf3ff);
+}
+.ds-tag--info.ds-tag--solid {
+  background: var(--color-feedback-info-icon, #226ff6);
+  color: var(--white, #fff);
+}
+.ds-tag--info.ds-tag--solid.ds-tag--clickable:hover {
+  background: var(--blue-700, #1142ad);
+}
