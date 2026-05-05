@@ -33,7 +33,7 @@ export function Tag({
 
   const handleClick = (!disabled && clickable && onClick) ? onClick : undefined;
 
-  const iconSize = size === 'lg' ? 12 : 10;
+  const iconSize = size === 'sm' ? 8 : size === 'lg' ? 12 : 10;
 
   return (
     <span

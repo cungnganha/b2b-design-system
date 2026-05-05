@@ -21,7 +21,7 @@
 
 /* ── Sizes ── */
 .ds-tag--sm { padding: 2px 8px;   font-size: var(--font-size-xs, 11px);   gap: 4px; }
-.ds-tag--md { padding: 3px 10px;  font-size: var(--font-size-sm, 12px);   gap: 5px; }
+.ds-tag--md { padding: 4px 10px;  font-size: var(--font-size-sm, 12px);   gap: 4px; }
 .ds-tag--lg { padding: 4px 12px;  font-size: var(--font-size-base, 14px); gap: 6px; }
 
 /* ── Avatar slot ── */
@@ -35,6 +35,9 @@
 /* ── Label ── */
 .ds-tag__label {
   line-height: var(--line-height-xs, 16px);
+}
+.ds-tag--lg .ds-tag__label {
+  line-height: var(--line-height-base, 20px);
 }
 
 /* ── Remove button ── */
